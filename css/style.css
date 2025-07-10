@@ -1,0 +1,228 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #fff3e0, #ffe0e0);
+  background-image: url('../images/background1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #3a3a3a;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  animation: fadeBody 1s ease-in;
+}
+
+header {
+  background-color: #b71c1c;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  animation: slideDown 1s ease-out;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #b71c1c;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+nav a:hover {
+  background-color: #b71c1c;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(183, 28, 28, 0.3);
+}
+
+.section {
+  flex: 1;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-out;
+  margin-bottom: 40px;
+}
+
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: zoomIn 1.5s ease;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #b71c1c;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #555;
+}
+
+footer {
+  background-color: #b71c1c;
+  color: white;
+  text-align: center;
+  padding: 18px 10px;
+  font-size: 15px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: auto;
+}
+
+
+.menu-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.menu-item {
+  text-align: center;
+  width: 200px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.menu-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 4px solid #b71c1c;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  animation: zoomIn 1s ease;
+  margin-top: 20px;
+}
+
+.menu-image:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+.menu-container {
+  display: flex;
+  justify-content: center; /* untuk tengah secara horizontal */
+  gap: 300px; /* jarak antara menu-item */
+  flex-wrap: wrap; /* untuk responsif jika skrin kecil */
+  padding: 20px;
+}
+
+.menu-item {
+  text-align: center;
+  width: 200px; /* saiz tetap setiap kotak */
+}
+
+.menu-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.social-icons img {
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  animation: fadeInIcons 1.2s ease-in-out;
+}
+
+.social-icons img {
+  height: 50px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.social-icons img:hover {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+}
+
+
+@keyframes fadeInIcons {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
